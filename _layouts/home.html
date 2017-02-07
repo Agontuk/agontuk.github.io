@@ -18,6 +18,11 @@
             rel="stylesheet"
         />
 
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+
         <!-- Custom CSS -->
         <link
             href="{{ '/assets/css/3-col-portfolio.css?v=' | append: site.github.build_revision | relative_url }}"
@@ -55,6 +60,11 @@
                     <ul class="nav navbar-nav">
                         <li><a href="#">About</a></li>
                     </ul>
+                    <div class="pull-right github">
+                        <a href="{{ site.owner_url }}">
+                            <i class="fa fa-github fa-3x"></i>
+                        </a>
+                    </div>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
@@ -71,7 +81,7 @@
             </div>
 
             <!-- Projects Row -->
-            <div class="row">
+            <div class="row projects">
                 <div class="col-md-4 portfolio-item">
                     <a href="#">
                         <img class="img-responsive" src="https://placehold.it/700x400" alt="">
@@ -107,7 +117,7 @@
                 <hr />
                 <div class="row">
                     <div class="col-lg-12">
-                        <span class="credits pull-left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+                        <span class="credits pull-left">Project maintained by <a href="{{ site.owner_url }}">{{ site.github.owner_name }}</a></span>
                         <span class="credits pull-right">
                             Copyright &copy;
                             <a href="/">{{ site.github.repository_name }}</a>,

@@ -19,6 +19,7 @@ description: Agontuk's own github site for his open source projects
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: Agontuk
+owner_url: https://github.com/Agontuk
 
 # Build settings
 markdown: kramdown

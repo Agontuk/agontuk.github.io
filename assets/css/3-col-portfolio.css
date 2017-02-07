@@ -26,13 +26,39 @@ nav + .container {
     margin-top: 1px;
 }
 
+.github {
+    height: 51px;
+}
+
+.github a, .github a:hover {
+    color: white;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.projects {
+    padding-bottom: 10px;
+}
+
 .portfolio-item {
     margin-bottom: 25px;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: inherit;
-    margin-bottom: 20px;
+    background-color: #252525;
+    max-width: 1140px;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: inherit;
+        padding-bottom: 20px;
+    }
+
+    .projects {
+        padding-bottom: 20px;
+    }
 }
