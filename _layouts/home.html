@@ -3,7 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
+
+        <title>{{ site.github.owner_name }}'s {{ site.title | default: site.github.repository_name }}</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta
+            name="description"
+            content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}"
+        >
 
         <!-- Bootstrap Core CSS -->
         <link
@@ -29,23 +36,37 @@
         <!--[if lt IE 8]>
         <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
         <![endif]-->
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     </head>
     <body>
-        <div id="header">
-            <nav>
-                <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
-            </nav>
-        </div><!-- end header -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">{{ site.github.repository_name }}</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
 
         <!-- Page Content -->
         <div class="container">
             <!-- Page Header -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Page Heading
-                        <small>Secondary Text</small>
-                    </h1>
+                    <h1 class="page-header">My Projects</h1>
                 </div>
             </div>
 
@@ -80,22 +101,30 @@
                 </div>
             </div>
             <!-- /.row -->
+
+            <!-- Footer -->
+            <footer>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <span class="credits pull-left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+                        <span class="credits pull-right">
+                            Copyright &copy;
+                            <a href="/">{{ site.github.repository_name }}</a>,
+                            {{ 'now' | date: "%Y" }}
+                        </span>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
         </div>
         <!-- /.container -->
 
-        <div class="wrapper">
-            <section>
-                <div id="title">
-                    <h1>{{ site.title | default: site.github.repository_name }}</h1>
-                    <p>{{ site.description | default: site.github.project_tagline }}</p>
-                    <hr>
-                    <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
-                    <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-                </div>
+        <!-- jQuery -->
+        <script src="{{ '/assets/js/jquery.js' | relative_url }}"></script>
 
-                {{ content }}
-            </section>
-        </div>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
 
         {% if site.google_analytics %}
         <script type="text/javascript">
