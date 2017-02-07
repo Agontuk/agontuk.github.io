@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link
+            href="{{ '/assets/css/bootstrap.min.css?v=' | append: site.github.build_revision | relative_url }}"
+            rel="stylesheet"
+        />
+
+        <!-- Custom CSS -->
+        <link
+            href="{{ '/assets/css/3-col-portfolio.css?v=' | append: site.github.build_revision | relative_url }}"
+            rel="stylesheet"
+        />
+        <link
+            href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+            rel="stylesheet"
+        />
+
+        <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
+
+        <!--[if lt IE 9]>
+          <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    </head>
+    <body>
+        <div id="header">
+            <nav>
+                <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
+            </nav>
+        </div><!-- end header -->
+
+        <!-- Page Content -->
+        <div class="container">
+            <!-- Page Header -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Page Heading
+                        <small>Secondary Text</small>
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Projects Row -->
+            <div class="row">
+                <div class="col-md-4 portfolio-item">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                    </a>
+                    <h3>
+                        <a href="#">Project Name</a>
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                </div>
+                <div class="col-md-4 portfolio-item">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                    </a>
+                    <h3>
+                        <a href="#">Project Name</a>
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                </div>
+                <div class="col-md-4 portfolio-item">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                    </a>
+                    <h3>
+                        <a href="#">Project Name</a>
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+
+        <div class="wrapper">
+            <section>
+                <div id="title">
+                    <h1>{{ site.title | default: site.github.repository_name }}</h1>
+                    <p>{{ site.description | default: site.github.project_tagline }}</p>
+                    <hr>
+                    <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+                    <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+                </div>
+
+                {{ content }}
+            </section>
+        </div>
+
+        {% if site.google_analytics %}
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("{{ site.google_analytics }}");
+                pageTracker._trackPageview();
+            } catch(err) {}
+        </script>
+        {% endif %}
+    </body>
+</html>
