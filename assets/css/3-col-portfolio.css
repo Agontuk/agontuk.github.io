@@ -44,10 +44,30 @@ nav + .container {
     margin-bottom: 25px;
 }
 
+.portfolio-item h3 > span {
+    position: relative;
+}
+
+iframe {
+    position: absolute;
+    left: 10px;
+    top: 3px;
+}
+
 footer {
     background-color: #252525;
     max-width: 1140px;
     padding-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+    nav {
+         display: block !important;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
 }
 
 @media (min-width: 992px) {
