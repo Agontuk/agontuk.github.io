@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-        <title>{{ site.github.owner_name }}'s {{ site.title | default: site.github.repository_name }}</title>
+        <title>
+            {% if page.title %}{{ page.title | escape }}{% else %}{{ site.github.owner_name }}'s {{ site.title | default: site.github.repository_name }}{% endif %}
+        </title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta
