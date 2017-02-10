@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <title>
+        {% if page.title %}{{ page.title | escape }}{% else %}{{ site.github.owner_name }}'s {{ site.title | default: site.github.repository_name }}{% endif %}
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta
+        name="description"
+        content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}"
+    >
+    <style>
+        #app { text-align: center; }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="{{ '/assets/js/cropper.js' | relative_url }}"></script>
+    {% include analytics.html %}
+  </body>
+</html>
