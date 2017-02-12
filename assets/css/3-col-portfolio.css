@@ -36,7 +36,7 @@ nav + .container {
     padding: 5px 0;
 }
 
-.projects {
+.projects:last-of-type {
     padding-bottom: 10px;
 }
 
@@ -82,7 +82,7 @@ footer {
         padding-bottom: 20px;
     }
 
-    .projects {
+    .projects:last-of-type {
         padding-bottom: 20px;
     }
 }
