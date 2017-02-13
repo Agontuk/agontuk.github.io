@@ -3,6 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta content="{{ site.url }}{{ '/assets/images/schema-designer.jpg' }}" property="og:image" />
+        <meta content="object" property="og:type" />
+        <meta content="Schema Designer" property="og:title" />
+        <meta content="https://agontuk.github.io/schema-designer/" property="og:url" />
+        <meta content="A tool for designing database schema" property="og:description" />
 
         <title>
             {% if page.title %}{{ page.title | escape }}{% else %}{{ site.github.owner_name }}'s {{ site.title | default: site.github.repository_name }}{% endif %}
