@@ -13,13 +13,14 @@
         name="description"
         content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}"
     >
-    <style>
-        #app { text-align: center; }
-    </style>
+
+    <link href="{{ '/assets/css/cropper/chunk-vendors.d627bc19.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/cropper/app.3cb6f334.css' | relative_url }}" rel="stylesheet">
   </head>
   <body>
     <div id="app"></div>
-    <script src="{{ '/assets/js/cropper.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/cropper/chunk-vendors.547a48c0.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/cropper/app.b4ed8b04.js' | relative_url }}"></script>
     {% include analytics.html %}
   </body>
 </html>
